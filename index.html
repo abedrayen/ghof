@@ -1,0 +1,347 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love, Rannou</title>
+    <style>
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes backgroundTransition {
+            0% {
+                background-color: #ffe6e6;
+            }
+            50% {
+                background-color: #ffb3b3;
+            }
+            100% {
+                background-color: #ffe6e6;
+            }
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #ffe6e6;
+            background-image: url('https://www.example.com/romantic-background.jpg'); /* Replace with your background image URL */
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            color: #4b2c20;
+            text-align: center;
+            animation: backgroundTransition 10s infinite;
+        }
+        header {
+            background-color: rgba(255, 182, 193, 0.9); /* Romantic pink */
+            color: #4b2c20; /* Dark brown */
+            padding: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            position: relative;
+            overflow: hidden;
+            height: 200px; /* Adjust header height as needed */
+        }
+        header h1 {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            padding-top: 20px; /* Adjust padding for vertical centering */
+        }
+        header::before, header::after {
+            content: '';
+            position: absolute;
+            width: 200%; /* Make sure it covers the entire area */
+            height: 200%; /* Make sure it covers the entire area */
+            background: url('https://img.icons8.com/emoji/48/000000/red-heart.png') repeat; /* Add heart icons */
+            animation: float 4s ease-in-out infinite;
+            z-index: 0;
+            opacity: 0.3;
+            top: -50%; /* Adjust for full coverage */
+            left: -50%; /* Adjust for full coverage */
+        }
+        header::after {
+            animation-delay: 2s;
+            opacity: 0.2;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #4b2c20; /* Dark brown */
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .search-bar {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+        .search-bar input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid #4b2c20;
+            border-radius: 10px 0 0 10px;
+            font-size: 16px;
+            outline: none;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            border: 2px solid #4b2c20;
+            border-left: none;
+            border-radius: 0 10px 10px 0;
+            background-color: #4b2c20;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #3b1f16;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            background-color: rgba(255, 182, 193, 0.9); /* Semi-transparent romantic pink */
+            color: #4b2c20; /* Dark brown */
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        footer {
+            background-color: rgba(255, 182, 193, 0.9); /* Romantic pink */
+            color: #4b2c20; /* Dark brown */
+            padding: 10px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .poetry {
+            font-style: italic;
+            font-size: 1.2em;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        /* Gallery Styles */
+        #gallery {
+            background-color: rgba(255, 105, 97, 0.9); /* Semi-transparent romantic red */
+            color: #fff;
+            padding: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .gallery-description {
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery-item {
+            width: calc(33.33% - 20px); /* Adjust for 3 images per row */
+            max-width: 300px;
+            margin: 10px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.1);
+        }
+
+        .footer-links a {
+            color: #4b2c20; /* Dark brown */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-icons img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        /* Audio player styling */
+        .audio-player {
+            margin: 20px 0;
+            background-color: rgba(255, 182, 193, 0.8); /* Semi-transparent romantic pink */
+            border: 2px solid #4b2c20; /* Dark brown */
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .audio-player audio {
+            width: 100%;
+            outline: none;
+        }
+        .reveal-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .hidden-content {
+            display: none;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>To My Beloved, Ghof</h1>
+        <nav>
+            <ul>
+                <li><a href="#section1">Samahni</a></li>
+                <li><a href="#section2">Adorable You</a></li>
+                <li><a href="#section3">Special Moments</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <!-- Section 1 - Our Love (without images) -->
+        <section id="section1">
+            <h2>Samahni</h2>
+            <p>Najem nekhser ayy Haja f denya hedhi ken enou nekhsrekk ntyy, omri makont ndhon rouhi nousel nghar aala 3abed kima gheret aalik nty shih hya hkeya bidouna ama ena fi la7dhetha 7melthesh syeh7i kenesh besh ndhelek nty jemla kn juste kifeh ena moush ghadi wfama chkoun je b9a maak hmelthesh whmeltesh eli nty 9omtsh. Samahni aala ayy haja khayba 7assesthelk ye3lem bia rabi ena zeda enharin kifeh t3adew w9adeh twaheshtekk w 9adeh ntyy aghla haja ena 9abeltha fhyetii naaref ghochi kn khayeb srtt mdhaghet eli n3ichouh fi barsha hajet, ama nty akther wahda taaref eli ena 9a3ed nsalah le max. Naaref tasarfi kn khayeb barsha ama khtr ena nhebek barsha aala adheka 7meltesh hajet akk wziid ki jit wl9it ahmed bezhar zedt foret wr7it eswager aala b3adhha hatta lin me3dtii t9at3et wdkhalet f7iit. Samahnii ama yhemni fi chyy f denya hedhi kn ntyy khtrk nty walitli edenya bkolha wbla biik l3icha ma3andha hatta mat3em.</p>
+            <p class="poetry">"وإني أحبك حبًا يفوق الخيال، وحبًا يضاهي النجوم في جماله، يا أروع قصيدة كتبتها الأزمان" </p>
+        </section>
+
+        <!-- Section 2 - Adorable You (without images) -->
+        <section id="section2">
+            <h2>Adorable You</h2>
+            <p>Makontesh naaref chnwa maaneha hob, aaraftou maa tofla mezyena esemha ghoff, wmen 7obii liha hbelet wtsarefet b facon tjish. Makontesh fehem rouhi jmla fi galeb lmaredh wnkhamem kn fiha w en meme temps moush 7amel eli sarr hata wkn howa tefah tww ama etari9a fi wa9tha knet khayba barsha. Enty a7la chy sarli f denya hedhi wnty hya eli l 7ob maak a7la mn hob lktob. Kont dima n9olk testehel makhir menni ama eda dima n9olk omri manehmel nrak maa ghiri. Naaref eli sarr akther men 7ajmou ama khater hobi liik akther mn ayy haja fdenya hedhi wkhaleni mahmesh bel facon adhika. Samahni aala kol chy rak aandi ena nty kol chyy.</p>
+            <p class="poetry">"وعندما أنظر في عينيك، أرى عالمي كله. يا حلوتي، حبك يملأ قلبي ويسكن روحي"</p>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="audio1.mp3" type="audio/mpeg"> <!-- Replace with your audio file URL -->
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+          
+            <iframe src="https://open.spotify.com/embed/track/3U4isOIWM3VvDubwSI3y7a" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            
+        </section>
+
+        <!-- Section 3 - Special Moments (without images) -->
+        <section id="section3">
+     
+            <p class="poetry">" وبي شوقٌ إليكَ أَعَل قلبي    وما لي غَيَر قُربكَ من طبيب"</p>
+
+        </section>
+        <button class="reveal-btn" onclick="revealContent()">Enzel houni</button>
+        <div class="hidden-content" id="hiddenContent">
+            <h2>SAMAHNI</h2>
+            <p>I understand how you feel, wnaaml kolchy to make things right. Mouhem nty mat7ess hatta ehses khayeb</p>
+        </div>
+
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <h2>Unforgettable Gallery</h2>
+            <p class="gallery-description">I used to look at the sky to see the moon, but now all I have to do is to stare at you, my ghof!</p>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="./image01.jpeg" alt="Gallery Image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="./image02.jpeg" alt="Gallery Image 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="./image03.jpeg" alt="Gallery Image 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="./image04.jpg" alt="Gallery Image 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="./image05.jpg" alt="Gallery Image 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="./image06.jpg" alt="Gallery Image 6">
+                </div>
+                <div class="gallery-item">
+                    <img src="./image07.jpg" alt="Gallery Image 7">
+                </div>
+                <div class="gallery-item">
+                    <img src="./image08.jpg" alt="Gallery Image 8">
+                </div>
+                <div class="gallery-item">
+                    <img src="./image09.jpg" alt="Gallery Image 9">
+                </div>
+   
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="footer-animation">All my love!</p>
+        <p>Don't hesitate to send your message. I am always waiting for you.</p>
+
+        <p class="footer-links">
+            <a href="https://www.facebook.com/rayen.abed.7169">
+                <img src="https://img.icons8.com/ios-glyphs/30/000000/email.png" alt="Email Icon"> Email Me
+            </a>
+            |
+            <a href="https://www.instagram.com/rayen__abed/" target="_blank">
+                <img src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" alt="Instagram Icon"> Instagram
+            </a>
+        </p>
+        <p>&copy; 2024 All love reserved for you and only you ghof!</p>
+    </footer>
+    <script>
+        function revealContent() {
+            var hiddenContent = document.getElementById('hiddenContent');
+            if (hiddenContent.style.display === 'none' || hiddenContent.style.display === '') {
+                hiddenContent.style.display = 'block';
+            } else {
+                hiddenContent.style.display = 'none';
+            }
+        }
+    </script>
+    
+</body>
+</html>
+
